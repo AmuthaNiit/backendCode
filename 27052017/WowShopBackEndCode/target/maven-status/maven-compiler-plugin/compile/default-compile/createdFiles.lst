@@ -1,0 +1,6 @@
+ShopID\Config\HibernateConfig.class
+ShopID\productService\productservice.class
+ShopID\Dao\Dao.class
+ShopID\DaoImplementation\DaoImpl.class
+ShopID\Config\App.class
+ShopID\productModel\Model.class
