@@ -36,7 +36,7 @@ public class HibernateConfig
 
 	        DriverManagerDataSource dataSource = new DriverManagerDataSource();
 	            
-	        dataSource.setUrl("jdbc:h2:tcp://localhost/~/testing123");
+	        dataSource.setUrl("jdbc:h2:tcp://localhost/~/shopdb");
 
 	        dataSource.setDriverClassName("org.h2.Driver");
 

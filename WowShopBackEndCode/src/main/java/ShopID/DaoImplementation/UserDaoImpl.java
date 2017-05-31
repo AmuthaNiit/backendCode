@@ -3,6 +3,8 @@ package ShopID.DaoImplementation;
 import java.util.List;
 
 import ShopID.Dao.UserDao;
+import ShopID.Model.userModel;
+
 import java.util.List;
 import java.util.Properties;
 
@@ -11,11 +13,20 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
-
+@Repository
 public class UserDaoImpl implements UserDao{
 	
-	private Session currentSession;
+	 @Autowired
+		private SessionFactory sessionFactory;
+		
+		public void setSessionFactory(SessionFactory sf){
+			this.sessionFactory = sf;
+		}
+	
+	/*private Session currentSession;
 		private Transaction currentTransaction;
 		
 		public UserDaoImpl() {
@@ -66,25 +77,30 @@ public class UserDaoImpl implements UserDao{
 	     public void setCurrentTransaction(Transaction currentTransaction) {
 	    	 	this.currentTransaction = currentTransaction;
 	    }
-
+*/
 			
 		
 
-	public List<UserDao> listData() {
-		List<UserDao> products = (List<UserDao>) getCurrentSession().createQuery("from User").list();
-        return products;
+	public List<userModel> listData() {
+	//	List<userModel> products = (List<userModel>) getCurrentSession().createQuery("from User").list();
+        return null;
 		
 	}
 
-	public void persist(UserDao obj) {
+	public void persist(userModel obj) {
 		// TODO Auto-generated method stub
-		getCurrentSession().save(obj);
+		System.out.println("Inside persist");
+		Session s=sessionFactory.openSession();
+		s.beginTransaction();
+		s.save(obj);
+		s.getTransaction().commit();
+		s.clear();
 	}
 
 	
-	public void updateData(UserDao obj) {
+	public void updateData(userModel obj) {
 		// TODO Auto-generated method stub
-		getCurrentSession().update(obj);
+		//getCurrentSession().update(obj);
 	}
 
 	
@@ -93,11 +109,18 @@ public class UserDaoImpl implements UserDao{
 		
 	}
 
-	public UserDao getproduct(int id) {
+	public userModel getproduct(int id) {
+		return null;
 		// TODO Auto-generated method stub
-		UserDao product = (UserDao) getCurrentSession().get(UserDao.class, id);
+	//	userModel product = (userModel) getCurrentSession().get(UserDao.class, id);
 		
-		return product;
+		//return product;
+	}
+
+	@Override
+	public void removedata(userModel obj) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

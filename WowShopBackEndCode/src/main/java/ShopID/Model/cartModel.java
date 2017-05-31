@@ -8,7 +8,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Cart")
+@Table(name="cartModel")
 public class cartModel {
 	
 	

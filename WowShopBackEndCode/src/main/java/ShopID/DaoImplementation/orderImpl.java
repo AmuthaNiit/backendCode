@@ -6,10 +6,12 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.springframework.stereotype.Repository;
 
 import ShopID.Dao.orderDao;
 import ShopID.Model.orderModel;
 
+@Repository
 public class orderImpl implements orderDao {
 		
 		private Session currentSession;

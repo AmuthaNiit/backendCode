@@ -7,10 +7,12 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.springframework.stereotype.Repository;
 
 import ShopID.Dao.cartDao;
 import ShopID.Model.cartModel;
 
+@Repository
 public class cartImpl implements cartDao{
 	
 	private Session currentSession;

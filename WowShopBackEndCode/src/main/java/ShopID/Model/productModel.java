@@ -30,6 +30,16 @@ public class productModel {
 	@Column(name="price")
     private double price;
 	
+	private String pimage;
+	
+	public String getPimage() {
+		return pimage;
+	}
+
+	public void setPimage(String pimage) {
+		this.pimage = pimage;
+	}
+
 	@ManyToOne
 	@JoinColumn(name="supplierId")
     private supplierModel supplier;

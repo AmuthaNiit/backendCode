@@ -11,17 +11,18 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "orders")
+@Table(name = "orderModel")
 public class orderModel implements Serializable {
 	
 	private static final long serialVersionUID=1L;
 	@Id
 	@Column(name="orderId")
-	@GeneratedValue
 	private String orderId;
-	
+	@ManyToOne  
+	@JoinColumn(name="UsId")
 	private userModel user;
-	
+	@Column(name="ordertotal")
+	private double ordertotal;	
 	@Column(name="payment")
 	private String payment;
 	public String getOrderId() {
@@ -38,8 +39,7 @@ public class orderModel implements Serializable {
 		this.orderId = orderId;
 	}
 	
-	@ManyToOne  
-	@JoinColumn(name="userId")
+	
 		public userModel getUser() {
 		return user;
 	}
@@ -58,8 +58,7 @@ public class orderModel implements Serializable {
 	public void setOrdertotal(double ordertotal) {
 		this.ordertotal = ordertotal;
 	}
-	@Column(name="ordertotal")
-	private double ordertotal;
+	
 	
 	
 }
