@@ -22,11 +22,11 @@ import ShopID.Model.productModel;
 			return "index";
 		}
 
-		@RequestMapping("/signup")
+		/*@RequestMapping("/signup")
 		public String signup()
 		{
 			return "signup";
-		}
+		}*/
 
 		@RequestMapping("/login")
 		public String login()

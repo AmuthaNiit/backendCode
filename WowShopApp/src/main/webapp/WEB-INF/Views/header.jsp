@@ -30,7 +30,7 @@
       <li class="active"><a href="#">Home</a></li>
       <li><a href="#">About us</a></li>
       <li><a href="add">Adding</a></li>
-      <li><a href="productlist">Productlist</a>
+      <li><a href="productList">ProductList</a>
       <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
@@ -45,7 +45,7 @@
           </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="./signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
     </ul>
   </div>

@@ -135,7 +135,17 @@ span.input-group-addon i {
 			<div class="row main">
 				<div class="main-login main-center">
 				<h5>Sign up</h5>
-					<form class="" method="post" action="#">
+					<form class="userForm" method="post" action="reg">
+						
+						<div class="form-group">
+							<label for="mail" class="cols-sm-2 control-label">Your Email</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+									<input type="email" class="form-control" name="mail" id="mail"  placeholder="Enter your Email" Required/>
+								</div>
+							</div>
+						</div>
 						
 						<div class="form-group">
 							<label for="name" class="cols-sm-2 control-label">Your Name</label>
@@ -147,22 +157,14 @@ span.input-group-addon i {
 							</div>
 						</div>
 
-						<div class="form-group">
-							<label for="email" class="cols-sm-2 control-label">Your Email</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-									<input type="email" class="form-control" name="email" id="email"  placeholder="Enter your Email" Required/>
-								</div>
-							</div>
-						</div>
+						
 
 						<div class="form-group">
 							<label for="username" class="cols-sm-2 control-label">Phone Number</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="phno" id="phno"  placeholder="Enter your phone number"   Required/>
+									<input type="number" class="form-control" name="phno" id="phno"  placeholder="Enter your phone number"   Required/>
 								</div>
 							</div>
 						</div>
@@ -172,11 +174,11 @@ span.input-group-addon i {
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"  Required/>
+									<input type="password" class="form-control" name="pwd" id="pwd"  placeholder="Enter your Password"  Required/>
 								</div>
 							</div>
 						</div>
-						<div class="form-group">
+						<!--  <div class="form-group">
 							<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
@@ -184,13 +186,13 @@ span.input-group-addon i {
 									<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"  Required/>
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<div class="form-group">
 							<label for="Age" class="cols-sm-2 control-label">AGE</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="age" id="age"  placeholder="Enter your age"  Required/>
+									<input type="number" class="form-control" name="age" id="age"  placeholder="Enter your age"  Required/>
 								</div>
 							</div>
 						</div>
@@ -203,11 +205,22 @@ span.input-group-addon i {
 								</div>
 							</div>
 						</div>
+						
+						<div class="form-group">
+							<label for="Age" class="cols-sm-2 control-label">CITY</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="city" id="city"  placeholder="Enter your age"  Required/>
+								</div>
+							</div>
+						</div>
 
 						
 
 						<div class="form-group ">
-							<a href="http://deepak646.blogspot.in" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Register</a>
+							<button id="submit" name="submit" value="uAdd" class="btn btn-primary">Register</button>
+                            <button id="submit" name="submit" value="ucancel" class="btn btn-primary">Cancel</button>
 						</div>
 						
 					</form>

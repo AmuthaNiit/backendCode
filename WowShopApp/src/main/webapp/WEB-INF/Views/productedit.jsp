@@ -1,8 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-         <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-    
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+
 <head>
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
@@ -76,68 +79,8 @@ body, html{
 </style>
 
 </head>
-
-<header>
-<jsp:include page="header.jsp"></jsp:include>
-
-</header>
-<Body>
-<div class="container-fluid">
- 
-	 <form action="category" method="post" class="CategoryForm"> 
-      <div class="row">      
-           <div class="col-md-4 col-sm-4 col-lg-4">
-              <label for="CategorID">CATEGORY ID</label>
-               <input id="c_id" name="c_id" class="form-control" type="text">    
-           </div>            
-      </div>
-      <div class="row">
-           <div class="col-md-4 col-sm-4 col-lg-4">
-              <label for="email">CATEGORY NAME</label>
-               <input id="c_name " name="c_name" class="form-control" type="text">             
-           </div>            
-      </div>
-      
-    
-      <div class="row">
-           <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
-           <button class="btn btn-default1">ADD</button>
-           </div>
-           <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
-           <button class="btn btn-default2">CANCEL</button>           
-          </div>          
-      </div>    
-      
-        <hr>
-      </form>
-<form action="supplier" method="post" class="SupplierForm"> 
-      <div class="row">      
-           <div class="col-md-4 col-sm-4 col-lg-4">
-              <label for="CategorID">SUPPLIER ID</label>
-               <input name="s_id" id="s_id" class="form-control" type="text">    
-           </div>            
-      </div>
-      <div class="row">
-           <div class="col-md-4 col-sm-4 col-lg-4">
-              <label for="email">SUPPLIER NAME</label>
-               <input  id="s_name" name="s_name" class="form-control" type="text">             
-           </div>            
-      </div>
-      
-      
-      <div class="row">
-           <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
-           <button class="btn btn-default1">ADD</button>
-           </div>
-           <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
-           <button class="btn btn-default2">CANCEL</button>           
-          </div>          
-      </div>    
-    </form>
-<hr>
-<!-- Product forms -->
-
-  <form action="product" method="post" class="productForm">  
+<body>
+ <form action="product" method="post" class="productForm">  
   
 
 <!-- Form Name -->
@@ -221,20 +164,6 @@ body, html{
 
 </fieldset>
 </form>
-</div>
 
-  
-<!--  end of product form -->
-
-
-
-
-
-
-<footer>
-<jsp:include page="footer.jsp"></jsp:include>
-</footer>
-
-</Body>
-
+</body>
 </html>
