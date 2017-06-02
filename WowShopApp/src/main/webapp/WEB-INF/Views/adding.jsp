@@ -147,7 +147,7 @@ body, html{
  <div class="form-group">
   <label class="col-md-4 control-label" for="fn">Product Id</label>  
   <div class="col-md-4">
-  <input name="pid" type="text" >
+  <input Id= "pid" name="pid" type="text" >
     </div>
 </div>
 <br>
@@ -155,7 +155,7 @@ body, html{
 <div class="form-group">
   <label class="col-md-4 control-label" for="ln">Product Name</label>  
   <div class="col-md-4">
-  <input name="pname" type="text" >
+  <input name="pname" id="pname" type="text" >
     
   </div>
 </div>

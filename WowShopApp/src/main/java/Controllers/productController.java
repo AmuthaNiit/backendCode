@@ -54,7 +54,7 @@ public class productController {
         System.out.println("cname     " +request.getParameter("cname")+" sname  " +request.getParameter("psid" ));
       int p_cat=Integer.parseInt(request.getParameter("cname"));
       int p_sc= Integer.parseInt(request.getParameter("psid"));  
-      
+       
       categoryModel c =cat.getproduct(p_cat);
         c.toString();
        supplierModel s=sup.getproduct((p_sc));

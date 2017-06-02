@@ -17,10 +17,10 @@ public class productListController {
 	@RequestMapping(value ="/productList")
     public ModelAndView listData() 
    {
-		ModelAndView mv=new ModelAndView("productList");
+		ModelAndView mv=new ModelAndView("productList"); 
 		List<productModel> slist=products.listData();
 		mv.addObject("slist", slist);
-	return mv;
+	    return mv;
 	
 
    }

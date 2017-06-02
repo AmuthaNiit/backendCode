@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -80,32 +82,32 @@ body, html{
 
 </head>
 <body>
- <form action="product" method="post" class="productForm">  
+ <form action="product_update" enctype="multipart/form-data" class="productForm">  
   
 
-<!-- Form Name -->
+<!-- Form Name --> 
 <fieldset>
 <legend>Add Product</legend>
 
  <div class="form-group">
-  <label class="col-md-4 control-label" for="fn">Product Id</label>  
+  <label class="col-md-4 control-label" for="fn" >Product Id</label>  
   <div class="col-md-4">
-  <input name="pid" type="text" >
+  <input name="pid" type="text" value= "${product.id}">
     </div>
 </div>
 <br>
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="ln">Product Name</label>  
+  <label class="col-md-4 control-label" for="ln" >Product Name</label>  
   <div class="col-md-4">
-  <input name="pname" type="text" >
+  <input name="pname" type="text" value= "${product.pname}" >
     
   </div>
 </div>
 <br>
 <!-- DropDown input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="ln">Product Category</label>  
+  <label class="col-md-4 control-label" for="ln" >Product Category</label>  
   <div class="col-md-4">
    
        <select id="cid" class="form-control" name="cname">
@@ -137,9 +139,9 @@ body, html{
 <br>
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="ln">Product Price</label>  
+  <label class="col-md-4 control-label" for="ln"  >Product Price</label>  
   <div class="col-md-4">
-  <input name="price" type="text" >
+  <input name="price" type="text" value="${product.price}">
     
   </div>
 </div>

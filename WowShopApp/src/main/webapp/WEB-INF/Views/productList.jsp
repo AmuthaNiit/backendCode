@@ -65,8 +65,8 @@
                          <c:forEach items="${slist}" var="p">
                          <tr>
                          <td>
-                             <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
-                             <a class="btn btn-danger"><em class="fa fa-trash"></em></a>
+                             <a class="btn btn-default" href="product_edit?id=${p.id}"><em class="fa fa-pencil"></em></a>
+                             <a class="btn btn-danger" href="./product_delete?id=${p.id}" ><em class="fa fa-trash"></em></a>
                            </td>
                            <td class="hidden-xs">${p.id}</td>
                            <td>${p.pname}</td>
