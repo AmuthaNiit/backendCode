@@ -106,11 +106,22 @@ public class supplierDaoImpl implements supplierDao {
 	public void updateData(supplierModel obj) {
 		// TODO Auto-generated method stub
 		//getCurrentSession().update(obj);
+ 	   Session s=sessionFactory.openSession();
+       s.beginTransaction();
+       s.update(obj);
+       s.getTransaction().commit();
+       s.close(); 
+
 	}
 
 	public void removedata(supplierModel obj) {
 		// TODO Auto-generated method stub
-		
+		Session s=sessionFactory.openSession();
+		s.beginTransaction();
+		s.delete(obj);
+		s.getTransaction().commit();
+		s.close();sessionFactory.openSession().delete(obj);
+	
 	}
 
 

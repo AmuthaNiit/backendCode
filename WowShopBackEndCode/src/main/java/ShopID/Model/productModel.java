@@ -102,6 +102,12 @@ public class productModel {
 		Category = category;
 	}
 
+	@Override
+	public String toString() {
+		return "productModel [productid=" + productid + ", pname=" + pname + ", price=" + price + ", pimage=" + pimage
+				+ ", supplier=" + supplier + ", Category=" + Category + "]";
+	}
+
 	
 	
     }

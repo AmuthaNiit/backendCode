@@ -82,7 +82,7 @@ public class productDaoImpl implements productDao
 			s.beginTransaction();
 			Criteria query=s.createCriteria(productModel.class);        
 			List<productModel> list=query.list();
-			System.out.println(list);
+			System.out.println("list");
 			s.getTransaction().commit();
 			return list;
 		}
@@ -91,22 +91,32 @@ public class productDaoImpl implements productDao
 
 	public void updateData(productModel obj) {
 		// TODO Auto-generated method stub
-		//getCurrentSession().update(obj);
+		Session s=sessionFactory.openSession();
+        s.beginTransaction();
+        s.update(obj);
+        s.getTransaction().commit();
+        s.close();
 	}
 
 
 	public void removedata(productModel obj) {
 		// TODO Auto-generated method stub
-		
+		Session s=sessionFactory.openSession();
+		s.beginTransaction();
+		s.delete(obj);
+		s.getTransaction().commit();
+		s.close();sessionFactory.openSession().delete(obj);
+
 	}
 
 
-	public productModel getproduct(int id) {
-		return null;
-	/*	productModel product = (productModel) getCurrentSession().get(productModel.class, id);
-		Session session = this.sessionFactory.getCurrentSession();		
-		productModel p = (productModel) session.load(productModel.class, new Integer(id));
-		p.toString();*/
+	public productModel getproduct(String id) {
+              
+		System.out.println("Inside get product");
+		productModel p=(productModel)sessionFactory.openSession().get(productModel.class, id);
+		System.out.println("outsides get product");
+        // TODO Auto-generated method stub
+        return p;
 		
 		
 		
@@ -125,5 +135,6 @@ public class productDaoImpl implements productDao
 		
 		
 	}
+
 
 }

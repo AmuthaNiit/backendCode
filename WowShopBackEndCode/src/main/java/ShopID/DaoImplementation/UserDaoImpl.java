@@ -117,7 +117,6 @@ public class UserDaoImpl implements UserDao{
 		//return product;
 	}
 
-	@Override
 	public void removedata(userModel obj) {
 		// TODO Auto-generated method stub
 		

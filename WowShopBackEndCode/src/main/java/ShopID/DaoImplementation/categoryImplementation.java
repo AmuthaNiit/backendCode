@@ -55,11 +55,7 @@ public class categoryImplementation implements categoryDao
 	
 		
 		
-		
-		
-		
-	
-	
+
 	public void addCategory(categoryModel category)
 	{
 		Session s=sessionFactory.openSession();
@@ -72,12 +68,22 @@ public class categoryImplementation implements categoryDao
 	
 	public void updateData(categoryModel obj) {
 		// TODO Auto-generated method stub
-		
+ 	   Session s=sessionFactory.openSession();
+       s.beginTransaction();
+       s.update(obj);
+       s.getTransaction().commit();
+       s.close(); 
+
 	}
 
 	public void removedata(categoryModel obj) {
 		// TODO Auto-generated method stub
-		
+		Session s=sessionFactory.openSession();
+		s.beginTransaction();
+		s.delete(obj);
+		s.getTransaction().commit();
+		s.close();sessionFactory.openSession().delete(obj);
+
 	}
 
 	public categoryModel getproduct(int id) {
@@ -93,7 +99,7 @@ public class categoryImplementation implements categoryDao
 	
 	public void addCategory(CategoryModel category)
 	{
-		 sessionFactory.getCurrentSession().saveOrUpdate(category);
+ 		 sessionFactory.getCurrentSession().saveOrUpdate(category);
     }
 		*/
 		

@@ -10,6 +10,6 @@ public interface productDao {
 	public void persist(productModel obj);
 	public void updateData(productModel obj);
 	public void removedata(productModel obj);
-	public  productModel getproduct(int id); 
+	public  productModel getproduct(String id); 
 
 }
