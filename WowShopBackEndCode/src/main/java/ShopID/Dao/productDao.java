@@ -11,5 +11,5 @@ public interface productDao {
 	public void updateData(productModel obj);
 	public void removedata(productModel obj);
 	public  productModel getproduct(String id); 
-
+	public List<productModel> getFilterProducts(int cid);
 }

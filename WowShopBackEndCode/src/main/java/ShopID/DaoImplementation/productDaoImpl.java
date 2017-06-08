@@ -108,7 +108,7 @@ public class productDaoImpl implements productDao
 		s.close();sessionFactory.openSession().delete(obj);
 
 	}
-
+ 
 
 	public productModel getproduct(String id) {
               
@@ -133,7 +133,16 @@ public class productDaoImpl implements productDao
 		s.clear();
 		 
 		
+	}
+
+	public List<productModel> getFilterProducts(int cid)
+	{
+		Session s=sessionFactory.openSession();
 		
+		List<productModel> results =s.createQuery("from productModel where categoryId="+cid).list();
+		s.close();
+		// TODO Auto-generated method stub
+		return results;
 	}
 
 

@@ -1,81 +1,95 @@
 package ShopID.Model;
+ 
+import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-@Entity
-@Table(name="cartModel")
-public class cartModel {
-	
-	
+@Entity	
+@Table(name="CartModel")
+public class cartModel implements Serializable
+{
 
+	
+	private static final long serialVersionUID = 1L;
+	
 	@Id
-	@Column(name="cartId")
-	private String cartId;
+     private int cartid;
+	//private int suplierid;
+	//private int productid;
+	//private int userid;
+	private productModel productid;
+	private supplierModel supplierId;
+	private userModel userid;
 	
-	@Column(name="price")
-	private double price;
-	@Column(name="quantity")
+	private double prices;
 	private int quantity;
+	private String status;
 	
-	@ManyToOne
-    @JoinColumn(name="supplierId")
-	private supplierModel supplier;
-	
-	@ManyToOne
-    @JoinColumn(name="productId")
-	private productModel product;
-	
-	public cartModel(String cartId,double price, int quantity) {
-		super();
-		this.cartId = cartId;
-		this.price = price;
-		this.quantity = quantity;
+	@Id
+	@GeneratedValue
+	@Column(name="cartid")//defining the database column
+	public int getCartid() {
+		return cartid;
 	}
-	public String getCartId() {
-		return cartId;
+	public void setCartid(int cartid) {
+		this.cartid = cartid;
 	}
-
-	public void setCartId(String cartId) {
-		this.cartId = cartId;
+	//In One productid display in cart
+		@OneToOne
+		@JoinColumn(name="productid")
+		public productModel getProductid() {
+			return productid;
+		}
+		public void setProductid(productModel productid) {
+			this.productid = productid;
+		}
+		/*@OneToOne
+		@JoinColumn(name="suplierid")
+		public SupplierModel getSuplierid() {
+			return suplierid;
+		}
+		public void setSuplierid(SupplierModel suplierid) {
+			this.suplierid = suplierid;
+		}*/
+		/*@OneToOne
+		@JoinColumn(name="userid")
+		public UserModel getUserid() {
+			return userid;
+		}
+		public void setUserid(UserModel userid) {
+			this.userid = userid;
+		}*/
+	@Column(name="prices")
+	public double getPrices() {
+		return prices;
 	}
-
-	public double getPrice() {
-		return price;
+	public void setPrices(double prices) {
+		this.prices = prices;
 	}
-
-	public void setPrice(double price) {
-		this.price = price;
-	}
-
+	@Column(name="quantity")
 	public int getQuantity() {
 		return quantity;
 	}
-
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-
-	public supplierModel getSupplier() {
-		return supplier;
+	/*@Column(name="status")
+	public String getStatus() {
+		return status;
 	}
-
-	public void setSupplier(supplierModel supplier) {
-		this.supplier = supplier;
-	}
-
-	public productModel getProduct() {
-		return product;
-	}
-
-	public void setProduct(productModel product) {
-		this.product = product;
-	}
-
-	
+	public void setStatus(String status) {
+		this.status = status;
+	}*/
 	
 }
+
+
+
+

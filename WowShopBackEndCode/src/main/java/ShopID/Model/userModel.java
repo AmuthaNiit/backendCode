@@ -38,6 +38,20 @@ public class userModel implements Serializable
 	@Column(name="age")
 	private int age;
 	
+	@Column(name="enabled") 
+	private boolean enabled;
+	
+	
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
+
+
 	public int getAge() {
 		return age;
 	}

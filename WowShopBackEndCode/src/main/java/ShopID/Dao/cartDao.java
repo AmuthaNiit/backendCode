@@ -6,10 +6,19 @@ import ShopID.Model.cartModel;
 
 public interface cartDao {
 	
-	public List<cartModel> listData();
-	public void persist(cartModel obj);
-	public void updateData(cartModel obj);
-	public void removedata(cartModel obj);
-	public  cartModel getproduct(int id); 
+	public void save(cartModel cart);
+    //read
+		public cartModel getId(int id);
+		//update
+		public void update(cartModel cart);
+		//deleted
+		public void deleteById(int id);
+		//Get All
+		public List<cartModel> getAll();
+		
+		public List<cartModel> checkExistance(int pid);
+		
+
+
 
 }

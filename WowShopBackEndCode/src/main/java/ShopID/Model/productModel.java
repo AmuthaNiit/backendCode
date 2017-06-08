@@ -30,6 +30,7 @@ public class productModel {
 	@Column(name="price")
     private double price;
 	
+	@Column(name="pimage")
 	private String pimage;
 	
 	public String getPimage() {
